@@ -106,11 +106,12 @@ def get_alarm_msg():
     """ 定时提醒内容 """
     conf = get_yaml()
     for gf in conf.get('girlfriend_infos'):
+        prompting_msg = "\t \t\t贴心小卫士 \r\n"
         dictum = get_dictum_info(gf.get('dictum_channel'))
         weather = get_weather_info(gf.get('city_name'))
-        diff_time = get_diff_time(gf.get('start_date'))
         sweet_words = gf.get('sweet_words')
-        send_msg = '\n'.join(x for x in [dictum, weather, diff_time, sweet_words] if x)
+        diff_time = get_diff_time(sweet_words, gf.get('start_date'))
+        send_msg = '\n'.join(x for x in [prompting_msg, dictum, weather, diff_time] if x)
         print(send_msg)
         if send_msg and is_online():
             wechat_name = gf.get('wechat_name')
@@ -169,6 +170,6 @@ def run():
 
 
 if __name__ == '__main__':
-    # run()
+    run()
     # get_alarm_msg()
     pass

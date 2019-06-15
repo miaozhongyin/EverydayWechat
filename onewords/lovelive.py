@@ -18,4 +18,10 @@ def get_lovelive_info():
         return None
     return None
 
+
 get_one_words = get_lovelive_info
+
+if __name__ == '__main__':
+    print(get_one_words())
+
+    pass

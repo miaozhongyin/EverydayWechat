@@ -21,7 +21,7 @@ def get_acib_info():
             content_dict = resp.json()
             content = content_dict.get('content')
             note = content_dict.get('note')
-            return '{}{}'.format(content, note)
+            return '  {}{}'.format(content, note)
 
         print('没有获取到格言数据。')
         return None
@@ -30,4 +30,9 @@ def get_acib_info():
         return None
     return None
 
+
 get_one_words = get_acib_info
+
+if __name__ == '__main__':
+    print(get_one_words())
+    pass

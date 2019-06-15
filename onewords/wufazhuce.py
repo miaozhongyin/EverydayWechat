@@ -21,7 +21,7 @@ def get_wufazhuce_info():
             soup_texts = BeautifulSoup(resp.text, 'lxml')
             # 『one -个』 中的每日一句
             every_msg = soup_texts.find_all('div', class_='fp-one-cita')[0].find('a').text
-            return every_msg
+            return "  " + every_msg
         print('每日一句获取失败。')
     except Exception as exception:
         print(exception)
@@ -30,3 +30,7 @@ def get_wufazhuce_info():
 
 
 get_one_words = get_wufazhuce_info
+
+
+if __name__ == '__main__':
+    print(get_one_words())

@@ -11,41 +11,53 @@ is_auto_relay: True
 #图灵机器人(http://www.tuling123.com/)免费用户每天可用 100 条。
 #请在官网注册并申请 apikey ,userID。
 turing_conf:
-  apiKey: ''
-  userId: ''
+  apiKey: '737223fb171f4114a55d16d567ae488f'
+  userId: '464428'
 
 # 指定自动回复的好友名单。
 # - '好友1'
 # - '好友2'
 auto_reply_names:
-  - '古典'
+  - 'follow heart'
+  - '张建国'
+  - '马晓丽'
 
 #------------------------ 定时时间功能--------------------------
 alarm_info:
   #True 开启定时提醒，False 关闭
   is_alarm: True
   #定时发送时间
-  alarm_timed: '10:55'
+  alarm_timed: '12:37'
 
 girlfriend_infos:
   - #女友微信昵称或者备注名，不能输入微信号。
-    wechat_name: '古典'
+    wechat_name: 'follow heart'
     #女友所在城市，用于发送天气。（可空）
-    city_name: '桂林'
+    city_name: '成都'
     # 格言渠道（1 : ONE●一个，2 : 词霸（每日英语，双语）4 : 一言，5：笑话)(可空)
     dictum_channel : 5
     # 从那天开始勾搭的(最终效果为：宝贝这是我们在一起的第 111 天)（可空）
-    start_date: '2017-10-10'
+    start_date: '2019-03-30'
     # 后缀（可空）
     sweet_words: '来自最爱你的我。'
 
 
 #  如果你有多个好友需要发送，则参照这个样式，复制即可
 #  如不需要，则删除或注解下面所有的数据
-  - wechat_name: 'happy'
-    city_name: '朝阳区'
-    dictum_channel : 4
+  #- wechat_name: '张建国'
+  #  city_name: '西安'
+  #  dictum_channel : 4
+  #  start_date: '2018-11-11'
+  #  sweet_words: '老张。'
+#
+  #- wechat_name: '马晓丽'
+  #  city_name: '西安'
+  #  dictum_channel : 5
+  #  start_date: '2018-11-11'
+  #  sweet_words: '莉莉'
+  - wechat_name: '花样年华'
+    city_name: '西安'
+    dictum_channel : 5
     start_date: '2018-11-11'
-    sweet_words: '来自你俊美的老公。'
-
+    sweet_words: 'baby'
 

@@ -54,9 +54,10 @@ def get_bot_info(message):
     return reply_msg
 
 
-def get_diff_time(start_date):
+def get_diff_time(name, start_date):
     """
     # 在一起，一共多少天了。
+    :param name:baby name, baby
     :param start_date:str,日期
     :return: str,eg（宝贝这是我们在一起的第 111 天。）
     """
@@ -65,7 +66,7 @@ def get_diff_time(start_date):
     try:
         start_datetime = datetime.strptime(start_date, '%Y-%m-%d')
         day_delta = (datetime.now() - start_datetime).days
-        delta_msg = '宝贝这是我们在一起的第 {} 天。'.format(day_delta)
+        delta_msg = '{} 这是我们在一起的第 {} 天。'.format(name, day_delta)
     except Exception as exception:
         print(exception)
         delta_msg = None
@@ -76,5 +77,7 @@ def get_diff_time(start_date):
 
 if __name__ == '__main__':
     print(get_dictum_info(2))
+    print(get_weather_info("西安"))
+    print(get_diff_time("baby", "2019-03-30"))
 
     pass

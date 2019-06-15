@@ -9,13 +9,20 @@ def get_hitokoto_info():
     """
     print('获取一言...')
     try:
-        resp = requests.get('https://v1.hitokoto.cn/', params={'encode': 'text'})
+        resp = requests.get('https://v1.hitokoto.cn/', params={'c': 'e', 'encode': 'text'})
         if resp.status_code == 200:
-            return resp.text
+            return "开心一言:\r\n" + "  "+resp.text
         print('一言获取失败。')
     except requests.exceptions.RequestException as exception:
         print(exception)
         return None
     return None
 
+
 get_one_words = get_hitokoto_info
+
+
+if __name__ == '__main__':
+    print(get_one_words())
+
+    pass
